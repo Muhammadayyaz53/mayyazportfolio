@@ -11,7 +11,7 @@ export function Header() {
             <Image src="/Ayyaz.jpg" alt="Muhammad Ayyaz" fill sizes="48px" className="avatar-image" priority />
           </span>
           <span className="brand-copy">
-            <span className="brand-name">Muhammad Ayyaz</span>
+            <span className="brand-name"></span>
           </span>
         </Link>
 

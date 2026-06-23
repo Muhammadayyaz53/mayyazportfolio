@@ -1,4 +1,4 @@
-import Link from "next/link";
+
 import { projects } from "../../data/portfolio";
 import { Section } from "../../components/section";
 
