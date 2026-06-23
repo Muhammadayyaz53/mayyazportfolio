@@ -9,12 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.4.0",
+    "mongoose": "^9.7.2",
     "next": "^15.3.3",
+    "nodemailer": "^9.0.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.80.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
+    "@types/nodemailer": "^8.0.1",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "eslint": "^9.17.0",

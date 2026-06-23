@@ -104,7 +104,7 @@ export const milestones = [
 ];
 
 export const contactDetails = [
-  { label: "Email", value: "ayyaz.dev@email.com" },
+  { label: "Email", value: "muhmmadayyaz68392@gmail.com" },
   { label: "Location", value: "Islamabad, PK" },
 ];
 

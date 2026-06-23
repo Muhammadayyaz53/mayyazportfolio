@@ -19,9 +19,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["next-env.d.ts", "src/app/**/*.ts", "src/app/**/*.tsx", "src/components/**/*.ts", "src/components/**/*.tsx", "src/data/**/*.ts", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", "backend"]
+  "exclude": ["node_modules", "src/backend"]
 }

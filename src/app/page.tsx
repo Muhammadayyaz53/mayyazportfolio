@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { contactDetails, githubUrl, heroStats, projects, services, skills } from "../data/portfolio";
+import { githubUrl, heroStats, projects, services, skills } from "../data/portfolio";
+import ContactSection from "../components/sections/contact";
 
 export default function HomePage() {
   return (
@@ -148,7 +149,7 @@ export default function HomePage() {
           <div>
             <span className="eyebrow">Contact</span>
             <h2>Ready to work together?</h2>
-            <p>Send a message using the form below—I'll reply with the next step.</p>
+            <p>Send a message using the form below—I&apos;ll reply with the next step.</p>
           </div>
           <div className="action-row">
             <Link className="button button-primary" href="#contact-form">
@@ -161,46 +162,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section" id="contact-form">
-        <div className="container contact-grid">
-          <div className="glass-card contact-panel">
-            <div className="contact-details">
-              {contactDetails.map((item) => (
-                <div className="contact-row" key={item.label}>
-                  <span>{item.label}</span>
-                  <strong>{item.value}</strong>
-                </div>
-              ))}
-            </div>
-
-            <div className="action-row">
-              <a className="button button-primary" href={githubUrl} target="_blank" rel="noreferrer">
-                GitHub
-              </a>
-            </div>
-          </div>
-
-          <div className="glass-card contact-panel">
-            <form className="contact-form">
-              <label>
-                <span>Full Name</span>
-                <input type="text" defaultValue="Muhammad Ayyaz" />
-              </label>
-              <label>
-                <span>Email Address</span>
-                <input type="email" placeholder="email@example.com" />
-              </label>
-              <label>
-                <span>Message</span>
-                <textarea rows={5} placeholder="How can I help you?" />
-              </label>
-              <button className="button button-primary button-submit" type="button">
-                Send Message
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
+      <div id="contact-form">
+        <ContactSection />
+      </div>
     </main>
   );
 }
