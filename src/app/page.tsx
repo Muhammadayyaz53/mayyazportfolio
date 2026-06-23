@@ -26,7 +26,6 @@ export default function HomePage() {
                 Contact
               </Link>
             </div>
-
             <div className="stats-grid" aria-label="Portfolio highlights">
               {heroStats.map((stat) => (
                 <article className="stat-card" key={stat.label}>
@@ -36,7 +35,6 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-
           <div className="hero-visual glass-card">
             <div className="glow glow-primary" />
             <div className="portrait-frame">
@@ -45,12 +43,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       <section className="section section-muted section-about-home">
         <div className="container about-grid">
           <div className="section-copy">
             <span className="eyebrow">About Me</span>
-            <h2>About me</h2>
+            <h2>About Me</h2>
             <p>
               I focus on frontend experiences that feel structured, intentional, and visually
               consistent across every route.
