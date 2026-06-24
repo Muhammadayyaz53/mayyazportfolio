@@ -1,6 +1,6 @@
 export const heroStats = [
-  { value: "4+", label: "Years building interfaces" },
-  { value: "40+", label: "Projects delivered" },
+  { value: "1+", label: "Years building interfaces" },
+  { value: "8+", label: "Projects delivered" },
   { value: "12+", label: "Core technologies" },
 ];
 
@@ -111,6 +111,7 @@ export const contactDetails = [
 export const siteLinks = [
   { label: "Home", href: "/" },
   { label: "About Me", href: "/about" },
+  { label: "Experience", href: "/experience" },
   { label: "Services", href: "/services" },
   { label: "Projects", href: "/projects" },
   { label: "Contact", href: "/contact" },

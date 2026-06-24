@@ -92,7 +92,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <ExperienceSection />
+      <ExperienceSection limit={2} />
 
       <section className="section section-muted">
         <div className="container section-heading section-heading-row">
