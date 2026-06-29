@@ -182,6 +182,8 @@ export default function ContactSection() {
                 {errors.name ? <p className="text-sm text-rose-300">{errors.name.message}</p> : null}
               </label>
 
+              
+
               <label className="space-y-2">
                 <span className="text-sm font-medium text-slate-200">Email</span>
                 <input
