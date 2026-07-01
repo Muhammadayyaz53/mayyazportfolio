@@ -101,6 +101,7 @@ export default function ContactSection() {
       eyebrow="Contact"
       title="Get In Touch"
       description="Have a project in mind? Fill in the form and I'll get back to you as soon as possible."
+      centered={true}
     >
       <div className="contact-grid contact-grid-page">
         <div className="glass-card contact-panel">
@@ -167,7 +168,7 @@ export default function ContactSection() {
               <span>Phone Number</span>
               <input
                 type="tel"
-                placeholder="03160019053 or +923160019053"
+                placeholder="e.g. +1 (555) 000-0000"
                 {...register("phone")}
               />
               {errors.phone && (

@@ -44,6 +44,7 @@ export const projects = [
   {
     slug: "fullstack-curd-app",
     title: "Full Stack Curd App",
+    image: "/crud.png",
     description:
       "A CRUD-style application with clear workflows, structured data handling, and a practical product feel.",
     tags: ["Full Stack", "Next.js", "UI Systems"],
@@ -53,6 +54,7 @@ export const projects = [
   {
     slug: "lush-gardan",
     title: "Lush Gardan",
+    image: "/lush-garden.png",
     description:
       "A polished gardening and lifestyle experience focused on visual calm, clean presentation, and polished sections.",
     tags: ["Landing Page", "Next.js", "Design"],
@@ -60,17 +62,19 @@ export const projects = [
     link: "https://lush-gardan-nextjs-9sk6-pg7mwrm3r-muhammadayyaz53s-projects.vercel.app/",
   },
   {
-    slug: "signin-from-nextjs",
-    title: "Signin From Next.js",
+    slug: "boldo-landing-page",
+    title: "Boldo Landing Page",
+    image: "/boldo.png",
     description:
-      "A sign-in interface with focused form structure and straightforward user interaction states.",
-    tags: ["Auth UI", "Next.js", "Forms"],
-    summary: "A clean login flow with clear form hierarchy.",
-    link: "https://signinfromnextjs.netlify.app/login",
+      "A modern multi-purpose website template with a clean design and various features.",
+    tags: ["Landing Page", "Html & CSS", "Design"],
+    summary: "This is my Jernouy First landing website.",
+    link: "https://boldo-landing-page-virid.vercel.app/",
   },
   {
     slug: "multistep-form-calculator",
     title: "Multi-Step Form Calculator",
+    image: "/stepform.png",
     description:
       "A multi-step calculator flow with guided inputs, step progression, and a practical result screen.",
     tags: ["JavaScript", "Multi-Step", "Calculator"],
@@ -105,7 +109,7 @@ export const milestones = [
 
 export const contactDetails = [
   { label: "Email", value: "muhmmadayyaz68392@gmail.com" },
-  { label: "Location", value: "Islamabad, PK" },
+  { label: "Location", value: "House No: Zb4441 Awan Colony Pirwadhai Rawalpindi, 46000, Rawalpindi, Pakistan (Home)" },
 ];
 
 export const siteLinks = [
@@ -114,13 +118,12 @@ export const siteLinks = [
   { label: "Experience", href: "/experience" },
   { label: "Services", href: "/services" },
   { label: "Projects", href: "/projects" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export const footerLinks = [
-  { label: "Github", href: "https://github.com/Muhammadayyaz53" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/muhammad-ayyaz-757091247/" },
-  { label: "Resume", href: "https://drive.google.com/file/d/1k5wA2Xw8aRxRNzc3WV4K0zknr9khbRWI/view?usp=sharing" },
+  { label: "Github", icon: "github", href: "https://github.com/Muhammadayyaz53" },
+  { label: "LinkedIn", icon: "linkedin", href: "https://www.linkedin.com/in/muhammad-ayyaz-757091247/" },
+  { label: "Instagram", icon: "instagram", href: "https://www.instagram.com/_muhammadayyaz/" },
 ];
 
 export const githubUrl = "https://github.com/Muhammadayyaz53";

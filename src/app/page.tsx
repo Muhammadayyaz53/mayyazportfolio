@@ -1,6 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { githubUrl, heroStats, projects, services, skills } from "../data/portfolio";
+import {
+  resumeUrl,
+  heroStats,
+  projects,
+  services,
+  skills,
+} from "../data/portfolio";
 import ContactSection from "../components/sections/contact";
 import ExperienceSection from "../components/sections/Experience";
 
@@ -15,16 +21,23 @@ export default function HomePage() {
               Hi, I&apos;m <span>Muhammad Ayyaz</span>
             </h1>
             <p className="lede">
-              I design and build clean, fast, and modern interfaces with route-driven structure,
-              reusable components, and a premium portfolio feel.
+              I design and build clean, fast, and modern interfaces with
+              route-driven structure, reusable components, and a premium
+              portfolio feel.
             </p>
             <div className="action-row">
               <Link className="button button-primary" href="/projects">
                 View My Projects
               </Link>
-              <Link className="button button-secondary" href="/contact">
-                Contact
-              </Link>
+              <a
+                className="button button-secondary"
+                href={resumeUrl}
+                target="_blank"
+                rel="noreferrer"
+                download
+              >
+                Resume
+              </a>
             </div>
             <div className="stats-grid" aria-label="Portfolio highlights">
               {heroStats.map((stat) => (
@@ -38,7 +51,14 @@ export default function HomePage() {
           <div className="hero-visual glass-card">
             <div className="glow glow-primary" />
             <div className="portrait-frame">
-              <Image src="/Ayyaz.jpg" alt="Muhammad Ayyaz portrait" fill sizes="(max-width: 768px) 90vw, 420px" className="portrait-image" priority />
+              <Image
+                src="/Ayyaz.jpg"
+                alt="Muhammad Ayyaz portrait"
+                fill
+                sizes="(max-width: 768px) 90vw, 420px"
+                className="portrait-image"
+                priority
+              />
             </div>
           </div>
         </div>
@@ -47,18 +67,62 @@ export default function HomePage() {
         <div className="container about-grid">
           <div className="section-copy">
             <span className="eyebrow">About Me</span>
-            <h2>About Me</h2>
-            <p>
-              I focus on frontend experiences that feel structured, intentional, and visually
-              consistent across every route .
+            <h2>Crafting Digital Experiences</h2>
+            <p className="lede">
+              I am a frontend developer who focuses on building experiences that
+              feel structured, intentional, and visually consistent across every
+              device.
             </p>
+            <div className="action-row" style={{ marginTop: "1rem" }}>
+              <Link className="button button-primary" href="/about">
+                More About Me
+              </Link>
+            </div>
           </div>
 
-          <div className="glass-card about-panel">
-            <p>
-              I like pages that are easy to scan, easy to use, and easy to grow. The structure,
-              spacing, and route flow are all part of the experience.
+          <div className="glass-card about-panel" style={{ padding: "40px" }}>
+            <h3
+              style={{
+                marginBottom: "16px",
+                fontSize: "1.4rem",
+                color: "var(--text)",
+              }}
+            >
+              My Approach
+            </h3>
+            <p style={{ color: "var(--muted)", marginBottom: "24px" }}>
+              I like pages that are easy to scan, easy to use, and easy to grow.
+              The structure, spacing, and route flow are all part of the
+              experience.
             </p>
+            <ul
+              style={{
+                color: "var(--text)",
+                display: "grid",
+                gap: "14px",
+                paddingLeft: "8px",
+                listStyle: "none",
+              }}
+            >
+              <li
+                style={{ display: "flex", gap: "10px", alignItems: "center" }}
+              >
+                <span style={{ color: "var(--text)", opacity: 0.8 }}>❖</span>{" "}
+                Clean, maintainable code architecture
+              </li>
+              <li
+                style={{ display: "flex", gap: "10px", alignItems: "center" }}
+              >
+                <span style={{ color: "var(--text)", opacity: 0.8 }}>❖</span>{" "}
+                Pixel-perfect design implementation
+              </li>
+              <li
+                style={{ display: "flex", gap: "10px", alignItems: "center" }}
+              >
+                <span style={{ color: "var(--text)", opacity: 0.8 }}>❖</span>{" "}
+                Performance and accessibility focus
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -68,7 +132,9 @@ export default function HomePage() {
           <div className="section-heading center-heading">
             <span className="eyebrow">Skills</span>
             <h2>My Skills</h2>
-            <p>Three core cards centered on the page, with padding and spacing.</p>
+            <p>
+              Three core cards centered on the page, with padding and spacing.
+            </p>
           </div>
 
           <div className="skills-grid skills-grid-center">
@@ -94,69 +160,69 @@ export default function HomePage() {
       <ExperienceSection limit={2} />
 
       <section className="section section-muted">
-        <div className="container section-heading section-heading-row">
-          <div>
+        <div className="container section-center">
+          <div className="section-heading center-heading">
             <span className="eyebrow">Services</span>
             <h2>Services</h2>
           </div>
-          <Link className="text-link" href="/services">
-            View all services
-          </Link>
-        </div>
 
-        <div className="container services-grid">
-          {services.map((service) => (
-            <article className="glass-card service-card" key={service.title}>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-            </article>
-          ))}
+          <div className="services-grid">
+            {services.map((service) => (
+              <article className="glass-card service-card" key={service.title}>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="center-heading" style={{ marginTop: "8px" }}>
+            <Link className="button button-secondary" href="/services">
+              View all services
+            </Link>
+          </div>
         </div>
       </section>
 
       <section className="section">
-        <div className="container section-heading section-heading-row">
-          <div>
+        <div className="container section-center">
+          <div className="section-heading center-heading">
             <span className="eyebrow">Projects</span>
             <h2>Featured Work</h2>
           </div>
-          <Link className="text-link" href="/projects">
-            See all project
-          </Link>
-        </div>
 
-        <div className="container projects-grid projects-grid-home">
-          {projects.map((project, index) => (
-            <article className="glass-card project-card" key={project.slug}>
-              <div className={`project-thumb thumb-${index + 1}`}>
-                <div className="project-thumb-inner">
-                  <span>Project</span>
-                  <strong>{project.title}</strong>
+          <div className="projects-grid projects-grid-home">
+            {projects.map((project) => (
+              <article className="glass-card project-card" key={project.slug}>
+                <div className="project-thumb-image">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="project-cover-img"
+                  />
+                  <div className="project-thumb-overlay">
+                    <span>Project</span>
+                    <strong>{project.title}</strong>
+                  </div>
                 </div>
-              </div>
-              <p>{project.summary}</p>
-              <a className="button button-primary button-small" href={project.link} target="_blank" rel="noreferrer">
-                View My Project
-              </a>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section section-muted">
-        <div className="container hero-mini-cta glass-card">
-          <div>
-            <span className="eyebrow">Contact</span>
-            <h2>Ready to work together?</h2>
-            <p>Send a message using the form below—I&apos;ll reply with the next step.</p>
+                <p>{project.summary}</p>
+                <a
+                  className="button button-primary button-small"
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View My Project
+                </a>
+              </article>
+            ))}
           </div>
-          <div className="action-row">
-            <Link className="button button-primary" href="#contact-form">
-              Contact
+
+          <div className="center-heading" style={{ marginTop: "8px" }}>
+            <Link className="button button-secondary" href="/projects">
+              See all projects
             </Link>
-            <a className="button button-ghost" href={githubUrl} target="_blank" rel="noreferrer">
-              GitHub
-            </a>
           </div>
         </div>
       </section>
